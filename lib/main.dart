@@ -10,10 +10,17 @@ class Gratuity extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextStyle _ts = TextStyle(fontSize: 26.0);
-    double billAmt = 0.0;
 
-  sampleFunction(){
-    print(mycontroller.text);
+  calculateTipTotal(double percent){
+    double billTotal = double.parse(mycontroller.text);
+    double tip = billTotal * percent / 100.0;
+    double total = tip + billTotal;
+
+    AlertDialog results = AlertDialog(
+      content: Text("Tip: \$$tip \n" "Total: \$$total")
+    );
+
+    showDialog(context: context, builder: (BuildContext context) => results);
   }
 
     MoneyTextFormField moneyTextField =  MoneyTextFormField(
@@ -36,7 +43,7 @@ class Gratuity extends StatelessWidget {
       height: 75.0,
       child: RaisedButton(
               child: Text("15%"),
-              onPressed: sampleFunction,
+              onPressed: () => calculateTipTotal(15.0),
               color: Color(0xff0091EA),
               textColor: Colors.white,
               splashColor: Colors.grey,
@@ -49,7 +56,7 @@ class Gratuity extends StatelessWidget {
       height: 75.0,
       child: RaisedButton(
               child: Text("20%"),
-              onPressed: sampleFunction,
+              onPressed: () => calculateTipTotal(20.0),
               color: Color(0xff0091EA),
               textColor: Colors.white,
               splashColor: Colors.grey,
@@ -62,7 +69,7 @@ class Gratuity extends StatelessWidget {
       height: 75.0,
       child: RaisedButton(
               child: Text("25%"),
-              onPressed: sampleFunction,
+              onPressed: () => calculateTipTotal(25.0),
               color: Color(0xff0091EA),
               textColor: Colors.white,
               splashColor: Colors.grey,
@@ -75,7 +82,7 @@ class Gratuity extends StatelessWidget {
       height: 75.0,
       child: RaisedButton(
               child: Text("30%"),
-              onPressed: sampleFunction,
+              onPressed: () => calculateTipTotal(30.0),
               color: Color(0xff0091EA),
               textColor: Colors.white,
               splashColor: Colors.grey,
