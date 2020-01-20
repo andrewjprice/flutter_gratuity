@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:moneytextformfield/moneytextformfield.dart';
+import 'package:gratuity/widgets/index.dart';
 
 class Home extends StatelessWidget {
   // This widget is the root of your application.
@@ -7,7 +8,7 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    TextStyle _ts = TextStyle(fontSize: 26.0);
+    TextStyle _ts = TextStyle(fontSize: 25.0);
 
   calculate(double percent){
     double billTotal = double.parse(mycontroller.text);
@@ -36,62 +37,13 @@ class Home extends StatelessWidget {
                   _ts.copyWith(color: Colors.green))),
     );
 
-    Container tip_15 = Container(
-      width: 75.0,
-      height: 75.0,
-      child: RaisedButton(
-              child: Text("15%"),
-              onPressed: () => calculate(15.0),
-              color: Color(0xff0091EA),
-              textColor: Colors.white,
-              splashColor: Colors.grey,
-              padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-            )
-      );
-
-    Container tip_20 = Container(
-      width: 75.0,
-      height: 75.0,
-      child: RaisedButton(
-              child: Text("20%"),
-              onPressed: () => calculate(20.0),
-              color: Color(0xff0091EA),
-              textColor: Colors.white,
-              splashColor: Colors.grey,
-              padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-            )
-      );
-
-    Container tip_25 = Container(
-      width: 75.0,
-      height: 75.0,
-      child: RaisedButton(
-              child: Text("25%"),
-              onPressed: () => calculate(25.0),
-              color: Color(0xff0091EA),
-              textColor: Colors.white,
-              splashColor: Colors.grey,
-              padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-            )
-      );
-
-    Container tip_30 = Container(
-      width: 75.0,
-      height: 75.0,
-      child: RaisedButton(
-              child: Text("30%"),
-              onPressed: () => calculate(30.0),
-              color: Color(0xff0091EA),
-              textColor: Colors.white,
-              splashColor: Colors.grey,
-              padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-            )
-      );
-
     Row tipRow = Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
-        tip_15, tip_20, tip_25, tip_30
+        TipButton(label: '15%', onPressed: () => calculate(15.0)),
+        TipButton(label: '20%', onPressed: () => calculate(20.0)),
+        TipButton(label: '25%', onPressed: () => calculate(25.0)),
+        TipButton(label: '30%', onPressed: () => calculate(30.0))
       ],
     );
 
