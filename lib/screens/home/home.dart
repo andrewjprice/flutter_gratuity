@@ -22,21 +22,6 @@ class Home extends StatelessWidget {
     showDialog(context: context, builder: (BuildContext context) => results);
   }
 
-    MoneyTextFormField moneyTextField =  MoneyTextFormField(
-      settings: MoneyTextFormFieldSettings(
-          controller: mycontroller,
-          moneyFormatSettings: MoneyFormatSettings(
-              displayFormat: MoneyDisplayFormat.symbolOnLeft),
-          appearanceSettings: AppearanceSettings(
-              padding: EdgeInsets.all(15.0),
-              labelText: 'Total',
-              hintText: 'Amount',
-              labelStyle: _ts,
-              inputStyle: _ts.copyWith(color: Colors.black),
-              formattedStyle:
-                  _ts.copyWith(color: Colors.green))),
-    );
-
     Row tipRow = Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
@@ -49,7 +34,10 @@ class Home extends StatelessWidget {
 
     Container container = Container(
       child: Column(
-        children: [moneyTextField, tipRow]
+        children: [
+          new CurrencyTextField(controller: mycontroller, style: _ts),
+          tipRow
+        ]
       )
     );
 
