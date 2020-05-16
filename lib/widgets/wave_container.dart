@@ -12,16 +12,19 @@ class WaveContainer extends StatelessWidget {
       child: ClipPath(
           clipper: WaveClipper(),
           child: Container(
-            height: 300.0,
-            width: double.infinity * 2,
-            decoration: BoxDecoration(color: Theme.of(context).primaryColor),
-            child: Padding(
-              padding: EdgeInsets.only(top: 20.0),
-              child: Text(title,
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.arimaMadurai(fontSize: 24.0)),
-            ),
-          )),
+              height: 100.0,
+              width: double.infinity * 2,
+              decoration: BoxDecoration(color: Theme.of(context).primaryColor),
+              child: Column(
+                children: <Widget>[
+                  Padding(
+                    padding: EdgeInsets.only(top: 10.0),
+                    child: Text(title,
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.arimaMadurai(fontSize: 24.0)),
+                  ),
+                ],
+              ))),
     );
   }
 }
