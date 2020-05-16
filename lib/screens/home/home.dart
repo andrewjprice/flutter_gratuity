@@ -7,10 +7,19 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Stack(
-          children: <Widget>[],
-        )
+      body: ListView(
+        children: <Widget>[Column(
+          children: <Widget>[
+            ClipPath(
+              clipper: WaveClipper(),
+              child: Container(
+                height: 300.0,
+                decoration: BoxDecoration(color: Theme.of(context).primaryColor),
+              )
+            ),
+          ],
+        ),
+        ]
       )
     );
   }
