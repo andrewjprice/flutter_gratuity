@@ -11,7 +11,7 @@ class Home extends StatelessWidget {
         children: <Widget>[
           Column(
             children: <Widget>[
-              WaveContainer(title: 'Gratuity')
+              WaveContainer(title: 'Gratuity'),
             ],
           ),
         ]

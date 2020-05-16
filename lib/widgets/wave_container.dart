@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gratuity/widgets/wave_clipper.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class WaveContainer extends StatelessWidget {
   final String title;
@@ -18,10 +19,7 @@ class WaveContainer extends StatelessWidget {
               padding: EdgeInsets.only(top: 20.0),
               child: Text(title,
                   textAlign: TextAlign.center,
-                  style: TextStyle(
-                      fontSize: 24.0,
-                      fontFamily: 'Schyler',
-                      color: Colors.black)),
+                  style: GoogleFonts.arimaMadurai(fontSize: 24.0)),
             ),
           )),
     );
