@@ -7,6 +7,13 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(10.0),
+        child: AppBar(
+          backgroundColor: Theme.of(context).primaryColor,
+          elevation: 0.0,
+        ),
+      ),
       body: ListView(
         children: <Widget>[
           Column(
