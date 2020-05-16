@@ -8,9 +8,15 @@ class Routes {
 
   Routes() {
     runApp(new MaterialApp(
-      title: 'Tip Calculator',
+      title: 'Gratuity',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primaryColor: Color(0xFF9EE9C6),
+        accentColor: Color(0xFF5AA47F),
+        scaffoldBackgroundColor: Color(0xFFEFFEF7)
+      ),
       routes: routes,
-      home: new Home(),
+      home: Home(),
     ));
   }
 }
