@@ -19,6 +19,7 @@ class Home extends StatelessWidget {
           Column(
             children: <Widget>[
               WaveContainer(title: 'Gratuity'),
+              BillTotalField(),
             ],
           ),
         ]
