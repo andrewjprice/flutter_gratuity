@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:gratuity/widgets/index.dart';
 
 class UpdateText extends StatefulWidget {
@@ -45,34 +44,15 @@ class UpdateTextState extends State {
       child: Text(totalDisplay, style: TextStyle(fontSize: 20))
     );
 
-    Container splitContainer = Container(
-      padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
-      child: Column(
-        children: [
-          TextField(
-        decoration: InputDecoration(labelText: "Number of people"),
-        keyboardType: TextInputType.number,
-        inputFormatters: <TextInputFormatter>[WhitelistingTextInputFormatter.digitsOnly],
-      ),
-      RaisedButton(
-        onPressed: null,
-        child: Text(
-          'Split'
-        )),
-        ],
-      )
-    );
-
-    return Container(
-      child: Column(
-        children: [
+    return ListView(
+      children: <Widget>[
+        Column(children: <Widget>[
           new CurrencyTextField(controller: mycontroller, style: _ts),
           tipRow,
           tipDescription,
-          totalDescription,
-          splitContainer
-        ]
-      )
+          totalDescription
+        ],)
+      ],
     );
   }
 }
