@@ -5,16 +5,17 @@ class SplitField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * .25),
+      margin: EdgeInsets.symmetric(
+          horizontal: MediaQuery.of(context).size.width * .25),
       width: MediaQuery.of(context).size.width,
       child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Text('Split',
                 style: GoogleFonts.assistant(
-                    fontSize: 28.0,
-                    color: Colors.black26,
-                    fontWeight: FontWeight.bold)),
+                  fontSize: 28.0,
+                  color: Colors.black26,
+                )),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[

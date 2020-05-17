@@ -20,10 +20,8 @@ class Home extends StatelessWidget {
             children: <Widget>[
               WaveContainer(title: 'Gratuity'),
               BillTotalField(),
-              Padding(
-                padding: EdgeInsets.only(top: 20.0),
-                child: TipOptions(),
-              ),
+              SizedBox(height: 30.0),
+              TipOptions(),
               SizedBox(height: 30.0),
               SplitField()
             ],

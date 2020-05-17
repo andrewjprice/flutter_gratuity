@@ -18,7 +18,7 @@ class TipButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(18.0),
             side: BorderSide(color: Colors.white)),
         child:
-            Text(label, style: TextStyle(color: Theme.of(context).accentColor)),
+            Text(label, style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold, color: Theme.of(context).accentColor)),
         onPressed: onPressed,
       ),
     );

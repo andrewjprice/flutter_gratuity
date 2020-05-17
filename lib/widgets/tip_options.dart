@@ -13,20 +13,21 @@ class TipOptions extends StatelessWidget {
           children: <Widget>[
             Text('Choose tip',
                 style: GoogleFonts.assistant(
-                    fontSize: 18.0,
-                    color: Colors.black26,
-                    fontWeight: FontWeight.bold)),
+                  fontSize: 28.0,
+                  color: Colors.black26,
+                )),
+            SizedBox(height: 10.0),
             Row(
               children: <Widget>[
-                TipButton(label: '10%', onPressed: () {}, width: 75.0),
-                TipButton(label: '15%', onPressed: () {}, width: 75.0),
-                TipButton(label: '20%', onPressed: () {}, width: 75.0),
+                TipButton(label: '10%', onPressed: () {}, width: 80.0),
+                TipButton(label: '15%', onPressed: () {}, width: 80.0),
+                TipButton(label: '20%', onPressed: () {}, width: 80.0),
               ],
             ),
             Row(
               children: <Widget>[
-                TipButton(label: '25%', onPressed: () {}, width: 75.0),
-                TipButton(label: 'Custom tip', onPressed: () {}, width: 150.0),
+                TipButton(label: '25%', onPressed: () {}, width: 80.0),
+                TipButton(label: 'Custom tip', onPressed: () {}, width: 160.0),
               ],
             )
           ],

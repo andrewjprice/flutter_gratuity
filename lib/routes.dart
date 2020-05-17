@@ -13,7 +13,7 @@ class Routes {
       theme: ThemeData(
         primaryColor: Color(0xFF9EE9C6),
         accentColor: Color(0xFF5AA47F),
-        scaffoldBackgroundColor: Colors.white
+        scaffoldBackgroundColor: Color(0xFFEFFEF7)
       ),
       routes: routes,
       home: Home(),
