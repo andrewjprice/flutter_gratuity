@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gratuity/widgets/index.dart';
+import 'package:gratuity/widgets/tip_options.dart';
 
 class Home extends StatelessWidget {
   // This widget is the root of your application.
@@ -7,23 +8,24 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(10.0),
-        child: AppBar(
-          backgroundColor: Theme.of(context).primaryColor,
-          elevation: 0.0,
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(10.0),
+          child: AppBar(
+            backgroundColor: Theme.of(context).primaryColor,
+            elevation: 0.0,
+          ),
         ),
-      ),
-      body: ListView(
-        children: <Widget>[
+        body: ListView(children: <Widget>[
           Column(
             children: <Widget>[
               WaveContainer(title: 'Gratuity'),
               BillTotalField(),
+              Padding(
+                padding: EdgeInsets.only(top: 20.0),
+                child: TipOptions(),
+              )
             ],
           ),
-        ]
-      )
-    );
+        ]));
   }
 }
