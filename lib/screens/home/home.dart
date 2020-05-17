@@ -23,7 +23,9 @@ class Home extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(top: 20.0),
                 child: TipOptions(),
-              )
+              ),
+              SizedBox(height: 30.0),
+              SplitField()
             ],
           ),
         ]));
