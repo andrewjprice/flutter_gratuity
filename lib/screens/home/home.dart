@@ -15,17 +15,22 @@ class Home extends StatelessWidget {
             elevation: 0.0,
           ),
         ),
-        body: ListView(children: <Widget>[
-          Column(
-            children: <Widget>[
-              WaveContainer(title: 'Gratuity'),
-              BillTotalField(),
-              SizedBox(height: 30.0),
-              TipOptions(),
-              SizedBox(height: 30.0),
-              SplitField()
-            ],
-          ),
-        ]));
+        body: SafeArea(
+            child: ListView(
+              children: <Widget>[
+            Column(
+              children: <Widget>[
+                WaveContainer(title: 'Gratuity'),
+                BillTotalField(),
+                SizedBox(height: 30.0),
+                TipOptions(),
+                SizedBox(height: 30.0),
+                SplitField(),
+                SizedBox(height: 30.0),
+                SummaryContainer()
+              ],
+            ),
+          ]),
+        ));
   }
 }
