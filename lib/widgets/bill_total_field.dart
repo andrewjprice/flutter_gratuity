@@ -16,7 +16,7 @@ class BillTotalField extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text('Enter bill total',
-              style: GoogleFonts.assistant(
+              style: GoogleFonts.tajawal(
                 fontSize: 28.0,
                 color: Colors.black26,
               )),
@@ -24,7 +24,7 @@ class BillTotalField extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text('\$',
-                  style: GoogleFonts.assistant(
+                  style: GoogleFonts.tajawal(
                       fontSize: 28.0,
                       color: Theme.of(context).accentColor,
                       fontWeight: FontWeight.bold)),
@@ -33,7 +33,7 @@ class BillTotalField extends StatelessWidget {
                   child: TextField(
                       controller: _controller,
                       textAlign: TextAlign.end,
-                      style: GoogleFonts.assistant(
+                      style: GoogleFonts.tajawal(
                           fontSize: 28.0,
                           fontWeight: FontWeight.bold,
                           color: Theme.of(context).accentColor),

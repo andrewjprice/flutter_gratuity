@@ -10,7 +10,7 @@ class SummaryContainer extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             Container(
-                height: 350.0,
+                height: MediaQuery.of(context).size.height,
                 width: double.infinity * 2,
                 decoration: BoxDecoration(
                     color: Theme.of(context).primaryColor,
@@ -20,14 +20,15 @@ class SummaryContainer extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    SizedBox(height: 25.0),
+                    SizedBox(height: 30.0),
                     Text('Total per person',
-                        style: GoogleFonts.assistant(
+                        style: GoogleFonts.tajawal(
                           fontSize: 28.0,
                           color: Colors.black38,
                         )),
+                    SizedBox(height: 10.0),
                     Text('\$100.00',
-                        style: GoogleFonts.assistant(
+                        style: GoogleFonts.tajawal(
                             fontSize: 55.0,
                             fontWeight: FontWeight.bold,
                             color: Color(0xFF4D6846))),
@@ -38,12 +39,12 @@ class SummaryContainer extends StatelessWidget {
                         Column(
                           children: <Widget>[
                             Text('bill',
-                                style: GoogleFonts.assistant(
+                                style: GoogleFonts.tajawal(
                                   fontSize: 27.0,
                                   color: Colors.black38,
                                 )),
                             Text('\$0.00',
-                                style: GoogleFonts.assistant(
+                                style: GoogleFonts.tajawal(
                                   fontSize: 28.0,
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xFF4D6846),
@@ -54,12 +55,12 @@ class SummaryContainer extends StatelessWidget {
                         Column(
                           children: <Widget>[
                             Text('tip',
-                                style: GoogleFonts.assistant(
+                                style: GoogleFonts.tajawal(
                                   fontSize: 27.0,
                                   color: Colors.black38,
                                 )),
                             Text('\$0.00',
-                                style: GoogleFonts.assistant(
+                                style: GoogleFonts.tajawal(
                                   fontSize: 28.0,
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xFF4D6846),

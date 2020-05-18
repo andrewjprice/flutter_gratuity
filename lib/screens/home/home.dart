@@ -8,6 +8,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(10.0),
           child: AppBar(
@@ -15,22 +16,26 @@ class Home extends StatelessWidget {
             elevation: 0.0,
           ),
         ),
-        body: SafeArea(
-            child: ListView(
-              children: <Widget>[
-            Column(
-              children: <Widget>[
-                WaveContainer(title: 'Gratuity'),
-                BillTotalField(),
-                SizedBox(height: 30.0),
-                TipOptions(),
-                SizedBox(height: 30.0),
-                SplitField(),
-                SizedBox(height: 30.0),
-                SummaryContainer()
-              ],
-            ),
-          ]),
-        ));
+        body: SingleChildScrollView(
+            child: ConstrainedBox(
+                constraints: BoxConstraints(),
+                child: ListView(
+                  shrinkWrap: true,
+                  children: <Widget>[
+                    Container(
+                        child: Column(
+                      children: <Widget>[
+                        WaveContainer(title: 'Gratuity'),
+                        BillTotalField(),
+                        SizedBox(height: 30.0),
+                        TipOptions(),
+                        SizedBox(height: 30.0),
+                        SplitField(),
+                        SizedBox(height: 30.0),
+                        SummaryContainer()
+                      ],
+                    ))
+                  ],
+                ))));
   }
 }

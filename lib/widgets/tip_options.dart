@@ -12,7 +12,7 @@ class TipOptions extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Text('Choose tip',
-                style: GoogleFonts.assistant(
+                style: GoogleFonts.tajawal(
                   fontSize: 28.0,
                   color: Colors.black26,
                 )),

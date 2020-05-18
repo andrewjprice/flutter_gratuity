@@ -12,11 +12,12 @@ class SplitField extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Text('Split',
-                style: GoogleFonts.assistant(
+                style: GoogleFonts.tajawal(
                   fontSize: 28.0,
                   color: Colors.black26,
                 )),
             Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 IconButton(
@@ -26,7 +27,7 @@ class SplitField extends StatelessWidget {
                     onPressed: () {}),
                 SizedBox(width: 10.0),
                 Text('1',
-                    style: GoogleFonts.assistant(
+                    style: GoogleFonts.tajawal(
                         fontSize: 28.0,
                         fontWeight: FontWeight.bold,
                         color: Theme.of(context).accentColor)),
