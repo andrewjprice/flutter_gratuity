@@ -11,16 +11,27 @@ class AppState extends ChangeNotifier {
 
   void setTotal(double total) {
     _total = total;
+    calculate();
     notifyListeners();
   }
 
   void setTip(double tip) {
     _tip = tip;
+    calculate();
     notifyListeners();
   }
 
-  void setSplit(int split) {
-    _split = split;
+  void increaseSplit(int i) {
+    _split += i;
+    calculate();
+    notifyListeners();
+  }
+
+  void decreaseSplit(int i) {
+    if (_split - i > 0) {
+        _split -= i;
+    }
+    calculate();
     notifyListeners();
   }
 
@@ -30,4 +41,13 @@ class AppState extends ChangeNotifier {
   String get totalDisplay => _totalDisplay;
   String get billDisplay => _billDisplay;
   String get tipDisplay => _tipDisplay;
+  
+  void calculate() {
+    var total = (_total + (_total * _tip)) / _split;
+    var tip = (_total / _split) * _tip;
+    var bill = total - tip;
+    _totalDisplay = '\$${total.toStringAsFixed(2)}';
+    _tipDisplay = '\$${tip.toStringAsFixed(2)}';
+    _billDisplay = '\$${bill.toStringAsFixed(2)}';
+  }
 }
