@@ -23,15 +23,15 @@ class TipOptions extends StatelessWidget {
                 SizedBox(height: 10.0),
                 Row(
                   children: <Widget>[
-                    TipButton(label: '10%', onPressed: () { provider.setTip(0.1); }, width: 80.0),
-                    TipButton(label: '15%', onPressed: () { provider.setTip(0.15); }, width: 80.0),
-                    TipButton(label: '20%', onPressed: () { provider.setTip(0.2); }, width: 80.0),
+                    TipButton(label: '10%', onPressed: () { provider.setTip(0.1, '10'); }, width: 80.0, toggleKey: '10'),
+                    TipButton(label: '15%', onPressed: () { provider.setTip(0.15, '15'); }, width: 80.0, toggleKey: '15'),
+                    TipButton(label: '20%', onPressed: () { provider.setTip(0.2, '20'); }, width: 80.0, toggleKey: '20'),
                   ],
                 ),
                 Row(
                   children: <Widget>[
-                    TipButton(label: '25%', onPressed: () { provider.setTip(0.25); }, width: 80.0),
-                    TipButton(label: 'Custom tip', onPressed: () { provider.setTip(0.0); }, width: 160.0),
+                    TipButton(label: '25%', onPressed: () { provider.setTip(0.25, '25'); }, width: 80.0, toggleKey: '25'),
+                    TipButton(label: 'Custom tip', onPressed: () { provider.setTip(0.0, 'custom'); }, width: 160.0, toggleKey: 'custom'),
                   ],
                 )
               ],

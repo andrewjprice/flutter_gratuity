@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 
 class AppState extends ChangeNotifier {
   AppState();
+
   double _total = 0.0;
   double _tip = 0.0;
   int _split = 1;
+  String _toggle = '';
   String _totalDisplay = "\$0.00";
   String _billDisplay = "\$0.00";
   String _tipDisplay = "\$0.00";
@@ -15,7 +17,8 @@ class AppState extends ChangeNotifier {
     notifyListeners();
   }
 
-  void setTip(double tip) {
+  void setTip(double tip, String toggleKey) {
+    _toggle = _toggle == toggleKey ? '' : toggleKey;
     _tip = tip;
     calculate();
     notifyListeners();
@@ -38,6 +41,7 @@ class AppState extends ChangeNotifier {
   double get total => _total;
   double get tip => _tip;
   int get split => _split;
+  String get toggle => _toggle;
   String get totalDisplay => _totalDisplay;
   String get billDisplay => _billDisplay;
   String get tipDisplay => _tipDisplay;
