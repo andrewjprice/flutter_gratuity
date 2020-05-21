@@ -30,11 +30,14 @@ class SplitField extends StatelessWidget {
                         color: Theme.of(context).accentColor,
                         onPressed: () { provider.decreaseSplit(1); }),
                     SizedBox(width: 10.0),
-                    Text(provider.split.toString(),
-                        style: GoogleFonts.tajawal(
-                            fontSize: 28.0,
-                            fontWeight: FontWeight.bold,
-                            color: Theme.of(context).accentColor)),
+                    Padding(
+                      padding: EdgeInsets.only(top: 7.0),
+                      child: Text(provider.split.toString(),
+                          style: GoogleFonts.tajawal(
+                              fontSize: 28.0,
+                              fontWeight: FontWeight.bold,
+                              color: Theme.of(context).accentColor)),
+                    ),
                     SizedBox(width: 10.0),
                     IconButton(
                         icon: Icon(Icons.add),
