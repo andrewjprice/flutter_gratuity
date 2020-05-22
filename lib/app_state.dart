@@ -17,6 +17,12 @@ class AppState extends ChangeNotifier {
     notifyListeners();
   }
 
+  void setCustomTip(double tip) {
+    _tip = tip / 100;
+    calculate();
+    notifyListeners();
+  }
+
   void setTip(double tip, String toggleKey) {
     _toggle = _toggle == toggleKey ? '' : toggleKey;
     _tip = tip;
@@ -41,6 +47,7 @@ class AppState extends ChangeNotifier {
   double get total => _total;
   double get tip => _tip;
   int get split => _split;
+  String get customTipDisplay => (_tip * 100).toStringAsFixed(0);
   String get toggle => _toggle;
   String get totalDisplay => _totalDisplay;
   String get billDisplay => _billDisplay;
