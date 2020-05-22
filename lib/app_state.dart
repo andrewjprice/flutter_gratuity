@@ -24,8 +24,13 @@ class AppState extends ChangeNotifier {
   }
 
   void setTip(double tip, String toggleKey) {
-    _toggle = _toggle == toggleKey ? '' : toggleKey;
-    _tip = tip;
+    if (_toggle == toggleKey) {
+      _toggle = '';
+      _tip = 0.0;
+    } else {
+      _toggle = _toggle == toggleKey ? '' : toggleKey;
+      _tip = tip;
+    }
     calculate();
     notifyListeners();
   }
