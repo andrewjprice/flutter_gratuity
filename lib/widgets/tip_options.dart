@@ -56,7 +56,9 @@ class TipOptions extends StatelessWidget {
                     width: 80.0,
                     toggleKey: '25'),
                 TipButton(
-                    label: provider.toggle == 'custom' ? 'Custom: ${provider.customTipDisplay}%' : 'Custom tip',
+                    label: provider.toggle == 'custom'
+                        ? 'Custom: ${provider.customTipDisplay}%'
+                        : 'Custom tip',
                     onPressed: () {
                       provider.setTip(0.0, 'custom');
                     },
@@ -67,8 +69,18 @@ class TipOptions extends StatelessWidget {
             Visibility(
               visible: provider.toggle == 'custom',
               child: Container(
-                  width: MediaQuery.of(context).size.width * .6,
-                  child: CustomTip()),
+                width: MediaQuery.of(context).size.width * .6,
+                child: Slider.adaptive(
+                  value: provider.tip * 100,
+                  onChanged: (double newValue) {
+                    provider.setCustomTip(newValue);
+                  },
+                  min: 0.0,
+                  max: 100.0,
+                  divisions: 100,
+                  label: provider.customTipDisplay,
+                ),
+              ),
             )
           ],
         ),
