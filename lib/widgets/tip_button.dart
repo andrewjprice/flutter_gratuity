@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:gratuity/app_state.dart';
+import 'package:gratuity/index.dart';
 
 class TipButton extends StatelessWidget {
   final String toggleKey;

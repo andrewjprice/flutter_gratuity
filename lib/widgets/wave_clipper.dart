@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:gratuity/index.dart';
 
 class WaveClipper extends CustomClipper<Path> {
   @override

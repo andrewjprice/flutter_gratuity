@@ -1,7 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:gratuity/app_state.dart';
-import 'package:gratuity/widgets/summary_field.dart';
-import 'package:provider/provider.dart';
+import 'package:gratuity/index.dart';
 
 class SummaryContainer extends StatelessWidget {
   @override

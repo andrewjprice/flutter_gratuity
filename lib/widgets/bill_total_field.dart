@@ -1,8 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_masked_text/flutter_masked_text.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
-import 'package:gratuity/app_state.dart';
+import 'package:gratuity/index.dart';
 
 class BillTotalField extends StatelessWidget {
   @override

@@ -3,7 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:gratuity/widgets/tip_button.dart';
 import 'package:provider/provider.dart';
 import 'package:gratuity/app_state.dart';
-import 'package:gratuity/widgets/custom_tip.dart';
 
 class TipOptions extends StatelessWidget {
   @override

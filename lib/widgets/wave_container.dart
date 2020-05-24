@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:gratuity/widgets/wave_clipper.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:gratuity/index.dart';
 
 class WaveContainer extends StatelessWidget {
   final String title;
