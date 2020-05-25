@@ -21,6 +21,7 @@ class SplitField extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   IconButton(
+                      key: Key('decreaseBtn'),
                       icon: Icon(Icons.remove),
                       iconSize: 28.0,
                       color: Theme.of(context).accentColor,
@@ -35,6 +36,7 @@ class SplitField extends StatelessWidget {
                           color: Theme.of(context).accentColor)),
                   SizedBox(width: 10.0),
                   IconButton(
+                      key: Key('increaseBtn'),
                       icon: Icon(Icons.add),
                       iconSize: 28.0,
                       color: Theme.of(context).accentColor,

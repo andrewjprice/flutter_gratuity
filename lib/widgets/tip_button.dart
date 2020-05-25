@@ -16,6 +16,7 @@ class TipButton extends StatelessWidget {
           width: width,
           padding: EdgeInsets.only(right: 10.0),
           child: RaisedButton(
+            key: Key('tipBtn'),
             color: provider.toggle == toggleKey ? Theme.of(context).accentColor : Colors.white,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(18.0),

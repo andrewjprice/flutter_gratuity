@@ -34,6 +34,7 @@ class BillTotalField extends StatelessWidget {
                 Container(
                     width: 100,
                     child: TextField(
+                      key: Key('billTotalTextField'),
                       controller: _controller,
                       textAlign: TextAlign.end,
                       style: GoogleFonts.tajawal(
