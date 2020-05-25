@@ -1,15 +1,24 @@
-# gratuity
+# Gratuity
 
-A new Flutter project.
+A simple tip calculater built with Flutter.
 
-## Getting Started
+![demo](gratuity.gif)
 
-This project is a starting point for a Flutter application.
+![lcov](lcov.png)
 
-A few resources to get you started if this is your first Flutter project:
+## Run
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+[Install](https://flutter.dev/docs/get-started/install) Flutter
+
+```
+flutter run
+```
+
+## Test
+
+```
+flutter test
+```
 
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
